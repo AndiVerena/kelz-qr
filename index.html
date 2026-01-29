@@ -15,23 +15,34 @@
     padding: 0;
 }
 
+/* BODY */
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #014172, #FFC300);
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
 }
 
-/* CARD */
+/* OVERLAY = Handy-Hintergrund */
+.overlay {
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,0.15);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CARD = Inhalt */
 .container {
     width: 100%;
     max-width: 420px;
+
     background: rgba(255,255,255,0.95);
-    border-radius: 18px;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.35);
 }
 
 /* HEADER */
@@ -85,7 +96,7 @@ body {
     border-right: none;
 }
 
-/* INFO SECTION */
+/* INFO */
 .section {
     padding: 15px 20px;
     font-size: 14px;
@@ -102,7 +113,6 @@ body {
     border-bottom: none;
 }
 
-/* ICON */
 .icon {
     width: 28px;
     margin-right: 12px;
@@ -111,7 +121,6 @@ body {
     font-size: 18px;
 }
 
-/* LINK STYLE */
 .section a {
     text-decoration: none;
     color: #000;
@@ -136,17 +145,34 @@ body {
     width: 52px;
     height: 52px;
     border-radius: 50%;
-    transition: transform 0.2s;
 }
 
-.social img:hover {
-    transform: scale(1.1);
+/* ===========================
+   HANDY = VOLLBILD APP MODUS
+   =========================== */
+@media (max-width: 768px) {
+
+    .overlay {
+        align-items: stretch;
+    }
+
+    .container {
+        max-width: 100%;
+        min-height: 100vh;
+
+        border-radius: 0;
+        box-shadow: none;
+        background: rgba(255,255,255,0.92);
+    }
+
 }
 
-/* DESKTOP OPTIMIERUNG */
+/* ===========================
+   DESKTOP = KARTE
+   =========================== */
 @media (min-width: 900px) {
 
-    body {
+    .overlay {
         padding: 40px;
     }
 
@@ -154,14 +180,11 @@ body {
         max-width: 480px;
     }
 
-    .name {
-        font-size: 26px;
-    }
-
     .logo {
         width: 130px;
         height: 130px;
     }
+
 }
 
 </style>
@@ -169,12 +192,14 @@ body {
 
 <body>
 
+<div class="overlay">
+
 <div class="container">
 
 <!-- HEADER -->
 <div class="header">
 
-    <img src="logo.png" class="logo" alt="Logo">
+    <img src="logo.png" class="logo">
 
     <div class="name">Andreas Kelz</div>
     <div class="job">Gas | Wasser | Heizung</div>
@@ -233,12 +258,14 @@ body {
 <div class="social">
 
     <a href="https://www.facebook.com/profile.php?id=61587138996271" target="_blank">
-        <img src="facebook_icon.png" alt="Facebook">
+        <img src="facebook_icon.png">
     </a>
 
     <a href="https://www.instagram.com/kelz_installationen" target="_blank">
-        <img src="instagram_icon.png" alt="Instagram">
+        <img src="instagram_icon.png">
     </a>
+
+</div>
 
 </div>
 
