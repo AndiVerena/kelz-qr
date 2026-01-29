@@ -12,47 +12,61 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #014172, #FFC300);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 100%;
+    max-width: 420px;
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
 
 .header {
-    height: 300px;
+    background: linear-gradient(135deg, #014172, #FFC300);
     color: white;
     text-align: center;
-    padding-top: 30px;
+    padding: 35px 20px 25px;
 }
 
 .logo {
-    width: 110px;
-    height: 110px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
-    object-fit: cover;
     background: white;
-    padding: 5px;
-    margin-bottom: 15px;
+    padding: 6px;
+    object-fit: cover;
+    margin-bottom: 12px;
 }
 
 .name {
-    font-size: 26px;
+    font-size: 24px;
     font-weight: bold;
 }
 
 .job {
     opacity: 0.9;
+    margin-bottom: 20px;
 }
 
 .buttons {
     display: flex;
-    border-top: 1px solid rgba(255,255,255,0.3);
-    margin-top: 25px;
+    border-top: 1px solid rgba(255,255,255,0.4);
 }
 
 .btn {
     flex: 1;
-    padding: 15px;
+    padding: 14px;
     color: white;
     text-decoration: none;
     text-align: center;
-    border-right: 1px solid rgba(255,255,255,0.3);
+    font-size: 14px;
+    border-right: 1px solid rgba(255,255,255,0.4);
 }
 
 .btn:last-child {
@@ -60,9 +74,8 @@ body {
 }
 
 .section {
-    background: white;
-    padding: 15px;
-    font-size: 15px;
+    padding: 15px 18px;
+    font-size: 14px;
 }
 
 .row {
@@ -72,26 +85,31 @@ body {
     border-bottom: 1px solid #eee;
 }
 
+.row:last-child {
+    border-bottom: none;
+}
+
 .icon {
-    width: 30px;
+    width: 28px;
     text-align: center;
     margin-right: 10px;
 }
 
 .social {
     text-align: center;
-    padding: 20px;
+    padding: 18px;
+    border-top: 1px solid #eee;
 }
 
 .social a {
     display: inline-block;
-    width: 45px;
-    height: 45px;
-    line-height: 45px;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
     border-radius: 50%;
     margin: 5px;
     color: white;
-    font-size: 22px;
+    font-size: 20px;
     text-decoration: none;
 }
 
@@ -103,66 +121,70 @@ body {
 
 <body>
 
-<div class="header">
+<div class="card">
 
-    <!-- LOGO -->
-    <img src="logo.png" class="logo">
+    <div class="header">
 
-    <div class="name">Andreas Kelz</div>
-    <div class="job">Gas | Wasser | Heizung</div>
+        <!-- LOGO -->
+        <img src="logo.png" class="logo">
 
-    <div class="buttons">
-        <a class="btn" href="tel:+4366499171296">📞 CALL</a>
-        <a class="btn" href="mailto:office@kelz-inst.at">✉️ EMAIL</a>
-    </div>
+        <div class="name">Andreas Kelz</div>
+        <div class="job">Gas | Wasser | Heizung</div>
 
-</div>
-
-<div class="section">
-
-    <div class="row">
-        <div class="icon">📱</div>
-        <div>
-            0664 991 71 29 6<br>
-            <small>Mobile</small>
+        <div class="buttons">
+            <a class="btn" href="tel:+4366499171296">📞 CALL</a>
+            <a class="btn" href="mailto:office@kelz-inst.at">✉️ EMAIL</a>
         </div>
+
     </div>
 
-    <div class="row">
-        <div class="icon">✉️</div>
-        <div>
-            office@kelz-inst.at<br>
-            <small>Email</small>
+    <div class="section">
+
+        <div class="row">
+            <div class="icon">📱</div>
+            <div>
+                0664 991 71 29 6<br>
+                <small>Mobile</small>
+            </div>
         </div>
-    </div>
 
-    <div class="row">
-        <div class="icon">🛠</div>
-        <div>
-            Installateur<br>
-            <small>Gas | Wasser | Heizung</small>
+        <div class="row">
+            <div class="icon">✉️</div>
+            <div>
+                office@kelz-inst.at<br>
+                <small>Email</small>
+            </div>
         </div>
-    </div>
 
-    <div class="row">
-        <div class="icon">🌐</div>
-        <div>
-            www.kelz-installationen.at<br>
-            <small>Website</small>
+        <div class="row">
+            <div class="icon">🛠</div>
+            <div>
+                Installateur<br>
+                <small>Gas | Wasser | Heizung</small>
+            </div>
         </div>
+
+        <div class="row">
+            <div class="icon">🌐</div>
+            <div>
+                www.kelz-installationen.at<br>
+                <small>Website</small>
+            </div>
+        </div>
+
     </div>
 
-</div>
+    <div class="social">
 
-<div class="social">
+        <a class="fb"
+           href="https://www.facebook.com/profile.php?id=61587138996271"
+           target="_blank">f</a>
 
-    <a class="fb"
-       href="https://www.facebook.com/profile.php?id=61587138996271"
-       target="_blank">f</a>
+        <a class="ig"
+           href="https://www.instagram.com/kelz_installationen"
+           target="_blank">📷</a>
 
-    <a class="ig"
-       href="https://www.instagram.com/kelz_installationen"
-       target="_blank">📷</a>
+    </div>
 
 </div>
 
