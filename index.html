@@ -6,6 +6,9 @@
 
 <title>Andreas Kelz</title>
 
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 
 body {
@@ -18,53 +21,53 @@ body {
 /* Overlay */
 .overlay {
     min-height: 100vh;
-    background: rgba(0,0,0,0.15);
+    background: rgba(0,0,0,0.25);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 25px;
+    padding: 30px;
 }
 
-/* Hauptkarte */
+/* Karte */
 .card {
     width: 100%;
-    max-width: 420px;
-    border-radius: 22px;
+    max-width: 480px; /* Größer */
+    border-radius: 25px;
     overflow: hidden;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+    background: white;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
 }
 
-/* Glas-Header */
-.glass {
-    background: rgba(255,255,255,0.12);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    text-align: center;
+/* Header */
+.header {
+    background: linear-gradient(135deg, #014172, #FFC300);
     color: white;
-    padding: 35px 20px 25px;
+    text-align: center;
+    padding: 45px 20px 30px;
 }
 
 /* Logo */
 .logo {
-    width: 90px;
-    height: 90px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     background: white;
     padding: 6px;
-    object-fit: cover;
-    margin-bottom: 12px;
+    object-fit: contain;
+    margin-bottom: 15px;
 }
 
 /* Name */
 .name {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
 }
 
-/* Beruf */
+/* Job */
 .job {
     opacity: 0.9;
-    margin-bottom: 20px;
+    font-size: 16px;
+    margin-bottom: 25px;
 }
 
 /* Buttons */
@@ -75,11 +78,11 @@ body {
 
 .btn {
     flex: 1;
-    padding: 14px;
+    padding: 16px;
     color: white;
     text-decoration: none;
     text-align: center;
-    font-size: 14px;
+    font-size: 15px;
     border-right: 1px solid rgba(255,255,255,0.4);
 }
 
@@ -87,18 +90,20 @@ body {
     border-right: none;
 }
 
-/* Weißer Bereich */
-.section {
-    background: white;
-    padding: 15px 18px;
-    font-size: 14px;
+.btn i {
+    margin-right: 6px;
 }
 
-/* Zeilen */
+/* Infos */
+.section {
+    padding: 20px;
+    font-size: 15px;
+}
+
 .row {
     display: flex;
     align-items: center;
-    padding: 12px 0;
+    padding: 14px 0;
     border-bottom: 1px solid #eee;
 }
 
@@ -107,27 +112,30 @@ body {
 }
 
 .icon {
-    width: 28px;
+    width: 32px;
     text-align: center;
-    margin-right: 10px;
+    margin-right: 12px;
+    color: #666;
+    font-size: 18px;
 }
 
 /* Social */
 .social {
     text-align: center;
-    padding: 18px;
+    padding: 22px;
     border-top: 1px solid #eee;
 }
 
 .social a {
-    display: inline-block;
-    width: 42px;
-    height: 42px;
-    line-height: 42px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    height: 52px;
     border-radius: 50%;
-    margin: 5px;
+    margin: 8px;
     color: white;
-    font-size: 20px;
+    font-size: 24px;
     text-decoration: none;
 }
 
@@ -143,8 +151,8 @@ body {
 
 <div class="card">
 
-    <!-- GLAS-BEREICH -->
-    <div class="glass">
+    <!-- HEADER -->
+    <div class="header">
 
         <img src="logo.png" class="logo">
 
@@ -152,17 +160,22 @@ body {
         <div class="job">Gas | Wasser | Heizung</div>
 
         <div class="buttons">
-            <a class="btn" href="tel:+4366499171296">📞 CALL</a>
-            <a class="btn" href="mailto:office@kelz-inst.at">✉️ EMAIL</a>
+            <a class="btn" href="tel:+4366499171296">
+                <i class="fa-solid fa-phone"></i> CALL
+            </a>
+
+            <a class="btn" href="mailto:office@kelz-inst.at">
+                <i class="fa-solid fa-envelope"></i> EMAIL
+            </a>
         </div>
 
     </div>
 
-    <!-- WEISSER BEREICH -->
+    <!-- INFOS -->
     <div class="section">
 
         <div class="row">
-            <div class="icon">📱</div>
+            <div class="icon"><i class="fa-solid fa-phone"></i></div>
             <div>
                 0664 991 71 29 6<br>
                 <small>Mobile</small>
@@ -170,7 +183,7 @@ body {
         </div>
 
         <div class="row">
-            <div class="icon">✉️</div>
+            <div class="icon"><i class="fa-solid fa-envelope"></i></div>
             <div>
                 office@kelz-inst.at<br>
                 <small>Email</small>
@@ -178,7 +191,7 @@ body {
         </div>
 
         <div class="row">
-            <div class="icon">🛠</div>
+            <div class="icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
             <div>
                 Installateur<br>
                 <small>Gas | Wasser | Heizung</small>
@@ -186,7 +199,7 @@ body {
         </div>
 
         <div class="row">
-            <div class="icon">🌐</div>
+            <div class="icon"><i class="fa-solid fa-globe"></i></div>
             <div>
                 www.kelz-installationen.at<br>
                 <small>Website</small>
@@ -200,11 +213,15 @@ body {
 
         <a class="fb"
            href="https://www.facebook.com/profile.php?id=61587138996271"
-           target="_blank">f</a>
+           target="_blank">
+           <i class="fa-brands fa-facebook-f"></i>
+        </a>
 
         <a class="ig"
            href="https://www.instagram.com/kelz_installationen"
-           target="_blank">📷</a>
+           target="_blank">
+           <i class="fa-brands fa-instagram"></i>
+        </a>
 
     </div>
 
