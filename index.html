@@ -6,9 +6,12 @@
 
 <title>Andreas Kelz</title>
 
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 
-/* Grundlayout */
+/* Hintergrund */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -29,7 +32,7 @@ body {
 /* Karte */
 .card {
     width: 100%;
-    max-width: 520px; /* Desktop größer */
+    max-width: 520px;
     background: white;
     border-radius: 25px;
     overflow: hidden;
@@ -68,7 +71,7 @@ body {
     margin-bottom: 28px;
 }
 
-/* Call / Mail */
+/* Buttons */
 .buttons {
     display: flex;
     border-top: 1px solid rgba(255,255,255,0.4);
@@ -105,12 +108,22 @@ body {
     border-bottom: none;
 }
 
+/* Icon grau */
 .icon {
     width: 32px;
-    text-align: center;
     margin-right: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9a9a9a;
     font-size: 18px;
-    color: #666;
+}
+
+/* Klickbar ohne Deko */
+.row-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 /* Social */
@@ -135,7 +148,7 @@ body {
     transform: scale(1.1);
 }
 
-/* Mobile Anpassung */
+/* Mobile */
 @media (max-width: 600px) {
 
     .card {
@@ -171,8 +184,13 @@ body {
         <div class="job">Gas | Wasser | Heizung</div>
 
         <div class="buttons">
-            <a class="btn" href="tel:+4366499171296">📞 CALL</a>
-            <a class="btn" href="mailto:office@kelz-inst.at">✉️ EMAIL</a>
+            <a class="btn" href="tel:+4366499171296">
+                <i class="fa-solid fa-phone"></i> CALL
+            </a>
+
+            <a class="btn" href="mailto:office@kelz-inst.at">
+                <i class="fa-solid fa-envelope"></i> EMAIL
+            </a>
         </div>
 
     </div>
@@ -180,37 +198,47 @@ body {
     <!-- INFOS -->
     <div class="section">
 
+        <!-- Telefon -->
+        <a href="tel:+4366499171296" class="row-link">
         <div class="row">
-            <div class="icon">📱</div>
+            <div class="icon"><i class="fa-solid fa-phone"></i></div>
             <div>
                 0664 991 71 29 6<br>
                 <small>Mobile</small>
             </div>
         </div>
+        </a>
 
+        <!-- Email -->
+        <a href="mailto:office@kelz-inst.at" class="row-link">
         <div class="row">
-            <div class="icon">✉️</div>
+            <div class="icon"><i class="fa-solid fa-envelope"></i></div>
             <div>
                 office@kelz-inst.at<br>
                 <small>Email</small>
             </div>
         </div>
+        </a>
 
+        <!-- Beruf -->
         <div class="row">
-            <div class="icon">🛠</div>
+            <div class="icon"><i class="fa-solid fa-briefcase"></i></div>
             <div>
                 Installateur<br>
                 <small>Gas | Wasser | Heizung</small>
             </div>
         </div>
 
+        <!-- Website -->
+        <a href="https://www.kelz-installationen.at" target="_blank" class="row-link">
         <div class="row">
-            <div class="icon">🌐</div>
+            <div class="icon"><i class="fa-solid fa-globe"></i></div>
             <div>
                 www.kelz-installationen.at<br>
                 <small>Website</small>
             </div>
         </div>
+        </a>
 
     </div>
 
